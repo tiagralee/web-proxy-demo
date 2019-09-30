@@ -18,6 +18,10 @@ app.get('/api/autocomplete/:query', (req, res) => {
       }).catch(error => {
         res.send(JSON.stringify(error), 400);
       });
-})
+});
+
+app.get('/ping', (req, res) => {
+    res.send('pong')
+});
 
 app.listen(3001, () => console.log('Express server is running on localhost:3001'));
