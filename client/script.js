@@ -5,6 +5,8 @@
     });
     const fireSearch = async (input) => {
         document.getElementById('autocomplete-dropdown-items').innerHTML = '';
+        document.getElementById('dropdown-menu').classList.add('is-hidden');
+
         const response = await remoteCall(input)
         document.getElementById('autocomplete-control').classList.remove('is-loading');
 
@@ -16,7 +18,7 @@
                 document.getElementById('dropdown-menu').classList.remove('is-hidden');
                 document.getElementById('autocomplete-dropdown-items')
                     .insertAdjacentHTML('beforeend', `
-                        <a href="#" class="dropdown-item">
+                        <a href="#" onClick="setInputValue(this)" class="dropdown-item">
                             ${item.label}
                         </a>
                     `)
@@ -51,4 +53,13 @@
         }
       }
 }());
+function setInputValue(ele) {
+  document.getElementById('autocomplete-input').value = ele.innerText
+  document.getElementById('autocomplete-dropdown-items').innerHTML = '';
+  document.getElementById('dropdown-menu').classList.add('is-hidden');
 
+}
+
+function testAlert() {
+  alert('test')
+}
