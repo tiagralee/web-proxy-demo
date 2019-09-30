@@ -23,5 +23,6 @@ app.get('/api/autocomplete/:query', (req, res) => {
 app.get('/ping', (req, res) => {
     res.send('pong')
 });
+app.use('/', express.static('client'))
 
 app.listen(process.env.PORT, () => console.log('Express server is running'));

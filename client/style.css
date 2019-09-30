@@ -1,0 +1,7 @@
+.autocomplete {
+    display:block;
+}
+.autocomplete__selection-container, .autocomplete__selection-items {
+    padding-top: 0;
+    width: 100%;
+}

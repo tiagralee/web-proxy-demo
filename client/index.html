@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Bulma!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+  <section class="section">
+    <div class="container">
+      <h1 class="title">
+        Hello World
+      </h1>
+      <p class="subtitle">
+        My first website with <strong>Bulma</strong>!
+      </p>
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="dropdown is-active autocomplete">
+            <div class="dropdown-trigger">
+                <div id="autocomplete-control" class="control">
+                    <input class="input" type="text" id="autocomplete-input" placeholder="Normal loading input">
+                </div>
+            </div>
+            <div class="dropdown-menu autocomplete__selection-container is-hidden" id="dropdown-menu" role="menu">
+              <div id="autocomplete-dropdown-items" class="dropdown-content autocomplete__selection-items">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <script src="./script.js"></script>
+</body>
+
+</html>
