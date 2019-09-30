@@ -24,4 +24,4 @@ app.get('/ping', (req, res) => {
     res.send('pong')
 });
 
-app.listen(3001, () => console.log('Express server is running on localhost:3001'));
+app.listen(process.env.PORT, () => console.log('Express server is running'));
